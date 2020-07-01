@@ -1,0 +1,30 @@
+This uses vcfanno and some optimezed settings to speed up annotation with CADD tsv file.
+The same will work well for any single base genome annotation
+
+1. Create a CSI index with high resolution from CADD tsv file
+
+tabix -b 2 -e 2 -s 1 -m 12 --csi CADD.GRCh38.v1.5.whole_genome_SNVs.tsv.gz
+
+2. Annotate using vcfanno. Optimized settings: 15 threads, larger GO bin size, and finer GAP size
+see documentation at https://github.com/brentp/vcfanno/tree/master/docs
+
+GOGC=2000 IRELATE_MAX_GAP=1000 /well/gel/HICF2/software/bin-linux/vcfanno_linux64 -p 15 CADD_annotation_tsv.toml $inputvcf | bgzip -c > $outputvcf
+
+Annotation.sh run this on cluster.
+
+####  TIME REQUIRED  ####
+Test on 5271549 variants in standard vcf.gz tabix-indexed file
+Standard vcfanno using VCF files: 55m
+Optimized vcfanno: 27-30m
+
+####  CADD2VCF CONVERSION  ###
+I've created VCF version of CADD annotations, whole genome and by chrs, these files may be useful for further development.
+I've made a couple of C++ scripts that are quicker than scripting languages for conversion:
+- CADD2VCF: takes a plain tsv file as input 
+- CADD2VCF_stding: read lines from stdin
+In both cases header lines must be removed before passing data to the script
+
+- CADD2VCF_FullTSV.sh CADDin.tsv.gz CADDout.vcf.gz
+converts the full CADD db from tsv.gz to vcf.gz and creates both tbi and csi indexes
+- CADD2VCF_ByChr.sh CADDin.tsv.gz prefixout
+converts the full CADD db from tsv.gz to a series of 24 (1:22,X,Y) vcf.gz files (prefixout.chrN.vcf.gz)

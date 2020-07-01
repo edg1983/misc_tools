@@ -1,0 +1,73 @@
+##fileformat=VCFv4.0
+##fileDate=2019-09-02
+##source=Platypus_Version_0.7.9.5
+##platypusOptions={'assemblyRegionSize': 1500, 'trimReadFlank': 0, 'assembleBadReads': 1, 'bamFiles': ['data/BAM/Germline.filelist'], 'minVarDist': 9, 'trimSoftClipped': 1, 'minReads': 0, 'qualBinSize': 1, 'refFile': '/well/gel/HICF2/ref/genomes/GRCh38/bwakit/hs38DH.fa', 'maxHaplotypes': 50, 'filterVarsByCoverage': 1, 'maxSize': 1500, 'originalMaxHaplotypes': 50, 'skipDifficultWindows': 0, 'parseNCBI': 0, 'skipRegionsFile': None, 'noCycles': 0, 'trimAdapter': 1, 'minPosterior': 0, 'assembleAll': 1, 'trimOverlapping': 1, 'filterDuplicates': 1, 'abThreshold': 0.001, 'minFlank': 0, 'bufferSize': 100000, 'fileCaching': 0, 'useEMLikelihoods': 0, 'coverageSamplingLevel': 30, 'calculateFlankScore': 0, 'logFileName': 'logs/HICF2_humbug.txt', 'nCPU': 15, 'filterReadsWithUnmappedMates': 1, 'qdThreshold': 10, 'maxVariants': 8, 'scThreshold': 0.95, 'filterReadsWithDistantMates': 1, 'maxReads': 10000000.0, 'badReadsWindow': 11, 'genIndels': 1, 'largeWindows': 0, 'minMapQual': 20, 'maxVarDist': 15, 'maxGOF': 30, 'rlen': 150, 'minGoodQualBases': 20, 'refCallBlockSize': 1000, 'countOnlyExactIndelMatches': 0, 'longHaps': 0, 'HLATyping': 0, 'filterReadPairsWithSmallInserts': 1, 'minBaseQual': 20, 'getVariantsFromBAMs': 0, 'genSNPs': 1, 'assemble': 0, 'assemblerKmerSize': 15, 'minVarFreq': 0.05, 'alignScoreFile': '', 'verbosity': 2, 'sourceFile': ['data/VCF/merged_calls.stdchrs.vcf.gz'], 'compressReads': 0, 'rmsmqThreshold': 40, 'filteredReadsFrac': 0.7, 'outputRefCalls': 0, 'badReadsThreshold': 15, 'hapScoreThreshold': 4, 'regions': None, 'sbThreshold': 0.001, 'output': 'data/VCF/HICF2_humbug.vcf', 'assembleBrokenPairs': 0, 'mergeClusteredVariants': 1, 'maxGenotypes': 1275, 'nInd': 86}
+##contig=<ID=chr1,length=248956422,assembly=GRCh38>
+##contig=<ID=chr2,length=242193529,assembly=GRCh38>
+##contig=<ID=chr3,length=198295559,assembly=GRCh38>
+##contig=<ID=chr4,length=190214555,assembly=GRCh38>
+##contig=<ID=chr5,length=181538259,assembly=GRCh38>
+##contig=<ID=chr6,length=170805979,assembly=GRCh38>
+##contig=<ID=chr7,length=159345973,assembly=GRCh38>
+##contig=<ID=chr8,length=145138636,assembly=GRCh38>
+##contig=<ID=chr9,length=138394717,assembly=GRCh38>
+##contig=<ID=chr10,length=133797422,assembly=GRCh38>
+##contig=<ID=chr11,length=135086622,assembly=GRCh38>
+##contig=<ID=chr12,length=133275309,assembly=GRCh38>
+##contig=<ID=chr13,length=114364328,assembly=GRCh38>
+##contig=<ID=chr14,length=107043718,assembly=GRCh38>
+##contig=<ID=chr15,length=101991189,assembly=GRCh38>
+##contig=<ID=chr16,length=90338345,assembly=GRCh38>
+##contig=<ID=chr17,length=83257441,assembly=GRCh38>
+##contig=<ID=chr18,length=80373285,assembly=GRCh38>
+##contig=<ID=chr19,length=58617616,assembly=GRCh38>
+##contig=<ID=chr20,length=64444167,assembly=GRCh38>
+##contig=<ID=chr21,length=46709983,assembly=GRCh38>
+##contig=<ID=chr22,length=50818468,assembly=GRCh38>
+##contig=<ID=chrX,length=156040895,assembly=GRCh38>
+##contig=<ID=chrY,length=57227415,assembly=GRCh38>
+##contig=<ID=chrM,length=16569,assembly=GRCh38>
+##INFO=<ID=FR,Number=.,Type=Float,Description="Estimated population frequency of variant">
+##INFO=<ID=MMLQ,Number=1,Type=Float,Description="Median minimum base quality for bases around variant">
+##INFO=<ID=TCR,Number=1,Type=Integer,Description="Total reverse strand coverage at this locus">
+##INFO=<ID=HP,Number=1,Type=Integer,Description="Homopolymer run length around variant locus">
+##INFO=<ID=WE,Number=1,Type=Integer,Description="End position of calling window">
+##INFO=<ID=Source,Number=.,Type=String,Description="Was this variant suggested by Playtypus, Assembler, or from a VCF?">
+##INFO=<ID=FS,Number=.,Type=Float,Description="Fisher's exact test for strand bias (Phred scale)">
+##INFO=<ID=WS,Number=1,Type=Integer,Description="Starting position of calling window">
+##INFO=<ID=PP,Number=.,Type=Float,Description="Posterior probability (phred scaled) that this variant segregates">
+##INFO=<ID=TR,Number=.,Type=Integer,Description="Total number of reads containing this variant">
+##INFO=<ID=NF,Number=.,Type=Integer,Description="Total number of forward reads containing this variant">
+##INFO=<ID=TCF,Number=1,Type=Integer,Description="Total forward strand coverage at this locus">
+##INFO=<ID=NR,Number=.,Type=Integer,Description="Total number of reverse reads containing this variant">
+##INFO=<ID=TC,Number=1,Type=Integer,Description="Total coverage at this locus">
+##INFO=<ID=END,Number=.,Type=Integer,Description="End position of reference call block">
+##INFO=<ID=MGOF,Number=.,Type=Integer,Description="Worst goodness-of-fit value reported across all samples">
+##INFO=<ID=SbPval,Number=.,Type=Float,Description="Binomial P-value for strand bias test">
+##INFO=<ID=START,Number=.,Type=Integer,Description="Start position of reference call block">
+##INFO=<ID=ReadPosRankSum,Number=.,Type=Float,Description="Mann-Whitney Rank sum test for difference between in positions of variants in reads from ref and alt">
+##INFO=<ID=MQ,Number=.,Type=Float,Description="Root mean square of mapping qualities of reads at the variant position">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant-quality/read-depth for this variant">
+##INFO=<ID=SC,Number=1,Type=String,Description="Genomic sequence 10 bases either side of variant position">
+##INFO=<ID=BRF,Number=1,Type=Float,Description="Fraction of reads around this variant that failed filters">
+##INFO=<ID=HapScore,Number=.,Type=Integer,Description="Haplotype score measuring the number of haplotypes the variant is segregating into in a window">
+##INFO=<ID=Size,Number=.,Type=Integer,Description="Size of reference call block">
+##FILTER=<ID=GOF,Description="Variant fails goodness-of-fit test.">
+##FILTER=<ID=badReads,Description="Variant supported only by reads with low quality bases close to variant position, and not present on both strands.">
+##FILTER=<ID=alleleBias,Description="Variant frequency is lower than expected for het">
+##FILTER=<ID=hp10,Description="Flanking sequence contains homopolymer of length 10 or greater">
+##FILTER=<ID=Q20,Description="Variant quality is below 20.">
+##FILTER=<ID=HapScore,Description="Too many haplotypes are supported by the data in this region.">
+##FILTER=<ID=MQ,Description="Root-mean-square mapping quality across calling region is low.">
+##FILTER=<ID=strandBias,Description="Variant fails strand-bias filter">
+##FILTER=<ID=SC,Description="Variants fail sequence-context filter. Surrounding sequence is low-complexity">
+##FILTER=<ID=QualDepth,Description="Variant quality/Read depth ratio is low.">
+##FILTER=<ID=REFCALL,Description="This line represents a homozygous reference call">
+##FILTER=<ID=QD,Description="Variants fail quality/depth filter.">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Unphased genotypes">
+##FORMAT=<ID=GQ,Number=.,Type=Integer,Description="Genotype quality as phred score">
+##FORMAT=<ID=GOF,Number=.,Type=Float,Description="Goodness of fit value">
+##FORMAT=<ID=NR,Number=.,Type=Integer,Description="Number of reads covering variant location in this sample">
+##FORMAT=<ID=GL,Number=.,Type=Float,Description="Genotype log10-likelihoods for AA,AB and BB genotypes, where A = ref and B = variant. Only applicable for bi-allelic sites">
+##FORMAT=<ID=NV,Number=.,Type=Integer,Description="Number of reads containing variant in this sample">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	G166226J	G166227H	G166228R	G167635P	G174530H	G174547N	G175105W	G177459L	G179995Y	G179996X	G179998S	G180905Q	G180906V	G180907Y	G182072J	G182073H	G182074R	G185723P	G185724L	G186228X	G186229A	G186230S	G186231T	G187413R	G187414P	G187420G	G188565X	G188566A	G188567S	G190058W	G190059D	G190060F	G190062K	G190064V	G190066X	G190068S	G190635Y	G190636X	G190637A	G190655X	G190804Q	G190805V	G191930S	G192830L	G192831B	G192832W	G192833D	G193114P	G193115L	G193116B	G193117W	G195726V	G195729A	G195732N	G196469X	G197460T	G197461N	G197462J	G197473Q	G197474V	G197475Y	G197476X	G197477A	G198172D	G198887J	G198888H	G199492S	G201030A	G201032T	G201036R	G201037P	G201040W	G201045Q	G201054H	G201055R	G201056P	G201649D	G202329P	G202333D	G203573V	G203574Y	G203575X	G203576A	G203580J	G203581H	G203582R
